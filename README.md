@@ -17,3 +17,23 @@ SkillSync analyzes your resume, compares it with job descriptions, and generates
 
 ## 👨‍💻 Developer
 Shashank Devarasetty
+
+# Initialize Git
+git init
+
+# Add and commit first version
+git add .
+git commit -m "Initial commit"
+
+# Add GitHub as remote
+git remote add origin https://github.com/YOUR_USERNAME/skillsync.git
+
+# Set main branch and push
+git branch -M main
+git push -u origin main
+
+# On future updates
+git add .
+git commit -m "describe your change here"
+git push
+
