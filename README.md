@@ -26,7 +26,7 @@ git add .
 git commit -m "Initial commit"
 
 # Add GitHub as remote
-git remote add origin https://github.com/YOUR_USERNAME/skillsync.git
+git remote add origin https://github.com/devarasasank31/skillsync.git
 
 # Set main branch and push
 git branch -M main
