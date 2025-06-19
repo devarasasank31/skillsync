@@ -18,7 +18,8 @@ function App() {
   const handleResumeUpload = async () => {
     const formData = new FormData();
     formData.append("resume", file);
-    const res = await axios.post("http://localhost:5000/upload-resume", formData);
+    const res = await axios.post("https://skillsync-backend.onrender.com/upload-resume", formData);
+
     setResumeSkills(res.data.skills || []);
   };
 
