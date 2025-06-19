@@ -1,3 +1,7 @@
+import React, { useRef } from 'react';
+import ReactToPrint from 'react-to-print';
+import RoadmapPDF from './RoadmapPDF'; // You’ll create this component
+
 import { useState } from 'react';
 import axios from 'axios';
 
