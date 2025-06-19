@@ -3,6 +3,8 @@ import ReactToPrint from 'react-to-print';
 import RoadmapPDF from './RoadmapPDF'; // You’ll create this component
 
 import { useState } from 'react';
+const printRef = useRef();
+
 import axios from 'axios';
 
 function App() {
@@ -47,6 +49,25 @@ function App() {
 
       {/* Result Display */}
       {matchResult && (
+        
+  <>
+    <ReactToPrint
+      trigger={() => (
+        <button className="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+          📥 Download PDF
+        </button>
+      )}
+      content={() => printRef.current}
+      documentTitle="SkillSync_Roadmap"
+    />
+
+    {/* Hidden printable component */}
+    <div className="hidden">
+      <RoadmapPDF ref={printRef} data={matchResult} />
+    </div>
+  </>
+
+
         <div className="bg-gray-100 p-4 rounded shadow mt-6">
           <h2 className="text-xl font-semibold text-purple-700">🔍 Match Result</h2>
           <p>✅ Match %: <b>{matchResult.matchPercent}%</b></p>
